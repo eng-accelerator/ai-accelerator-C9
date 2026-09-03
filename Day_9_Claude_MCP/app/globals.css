@@ -1,0 +1,39 @@
+@import '../styles/theme.css';
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #000000;
+  color: var(--sage);
+  font-family: var(--font-jetbrains), var(--font-plex), ui-monospace, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background-image:
+    radial-gradient(60rem 40rem at 100% 0%, rgba(57, 255, 122, 0.08), transparent 60%),
+    radial-gradient(50rem 40rem at 0% 40%, rgba(57, 255, 122, 0.05), transparent 60%);
+  background-attachment: fixed;
+}
+
+.nameBanner {
+  font-size: 60px !important;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--ink);
+  text-shadow: var(--glow);
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.roleLine { color: var(--phosphor); font-size: 17px; text-shadow: var(--glow-soft); margin: 0 0 16px; }
+.roleLine::before { content: '> '; color: var(--sage); }
+
+.intro { color: var(--sage); max-width: 640px; margin: 0 0 20px; }
+.hl { color: var(--phosphor); }
+
+.metaChecks { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 26px; font-size: 12px; color: var(--sage); }
+.metaChecks span::before { content: '[x] '; color: var(--phosphor); }
+
+@media (max-width: 900px) {
+  .nameBanner { font-size: 38px !important; }
+}

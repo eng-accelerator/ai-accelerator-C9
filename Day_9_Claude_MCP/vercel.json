@@ -1,0 +1,4 @@
+{
+  "buildCommand": "prisma generate && next build",
+  "functions": { "app/api/council/route.ts": { "maxDuration": 300 } }
+}

@@ -1,0 +1,42 @@
+.answer { color: var(--sage); font-size: 14px; }
+.answer h1, .answer h2, .answer h3 { color: var(--ink); text-shadow: var(--glow-soft); }
+.answer h1 { font-size: 22px; }
+.answer h2 { font-size: 17px; }
+.answer code { color: var(--phosphor); background: #000; padding: 1px 5px; border-radius: 3px; }
+.answer strong { color: var(--ink); }
+
+.provenance { display: grid; grid-template-columns: 1fr 110px 90px; gap: 6px 14px; font-size: 12px; align-items: baseline; }
+.claim { color: var(--sage); }
+.support { color: var(--phosphor); }
+.supportSingle { color: var(--amber); }
+.seats { color: var(--phosphor-faint); text-align: right; }
+
+.contested {
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  padding: 18px;
+  background: rgba(255, 210, 74, 0.03);
+}
+.contestedTitle { color: var(--amber); text-shadow: var(--glow-amber); font-size: 13px; margin-bottom: 14px; }
+.contestedItem { margin: 0 0 18px; }
+.point { color: var(--ink); font-size: 13px; }
+.point::before { content: '[!] '; color: var(--amber); }
+.position { color: var(--sage); font-size: 12px; margin-left: 18px; }
+.ruling { color: var(--phosphor); font-size: 12px; margin-left: 18px; margin-top: 5px; }
+.ruling::before { content: 'ruling: '; color: var(--phosphor-faint); }
+
+.unanimous { color: var(--phosphor); font-size: 12px; }
+
+.footer {
+  border-top: 1px solid var(--hairline);
+  margin-top: 36px;
+  padding-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--phosphor-faint);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.degraded { color: var(--danger); font-size: 12px; margin-bottom: 16px; }
+.degraded::before { content: '[!] '; }

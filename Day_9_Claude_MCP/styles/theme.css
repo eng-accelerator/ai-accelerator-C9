@@ -1,0 +1,60 @@
+:root {
+  --phosphor: #39ff7a;
+  --phosphor-dim: #2bbf5c;
+  --phosphor-faint: #1c7a3c;
+  --sage: #5f8d68;
+  --ink: #eafff1;
+  --panel: #050805;
+  --panel-lift: #070b07;
+  --hairline: #143614;
+  --hairline-bright: #1f4d1f;
+  --amber: #ffd24a;
+  --danger: #ff5f56;
+  --dot-red: #ff5f56;
+  --dot-amber: #ffbd2e;
+  --dot-green: #27c93f;
+  --radius: 8px;
+  --radius-sm: 3px;
+  --glow: 0 0 8px rgba(57, 255, 122, 0.45), 0 0 24px rgba(57, 255, 122, 0.18);
+  --glow-soft: 0 0 6px rgba(57, 255, 122, 0.28);
+  --glow-amber: 0 0 8px rgba(255, 210, 74, 0.45);
+}
+
+.glow { text-shadow: var(--glow); }
+.glow-soft { text-shadow: var(--glow-soft); }
+
+::selection { background: rgba(57, 255, 122, 0.3); color: var(--ink); }
+
+/* Fixed CRT scanline overlay — spec 11.1 */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.16) 3px,
+    transparent 4px
+  );
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1em;
+  background: var(--phosphor);
+  box-shadow: var(--glow-soft);
+  vertical-align: text-bottom;
+  animation: blink 1.1s step-end infinite;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}

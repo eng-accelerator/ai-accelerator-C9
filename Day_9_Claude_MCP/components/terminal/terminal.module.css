@@ -1,0 +1,66 @@
+.window {
+  max-width: 1120px;
+  margin: 32px auto;
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(57, 255, 122, 0.06);
+  overflow: hidden;
+}
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 16px;
+  background: var(--panel-lift);
+  border-bottom: 1px solid var(--hairline);
+  font-size: 12px;
+}
+
+.dots { display: flex; gap: 7px; }
+.dot { width: 11px; height: 11px; border-radius: 6px; }
+
+.path { color: var(--sage); }
+.pathUser { color: var(--phosphor); }
+
+.nav { margin-left: auto; display: flex; gap: 18px; align-items: center; }
+.navLink { color: var(--sage); text-decoration: none; }
+.navLink:hover { color: var(--phosphor); text-shadow: var(--glow-soft); }
+
+.status { display: flex; align-items: center; gap: 7px; color: var(--amber); font-size: 12px; }
+.statusDot { width: 7px; height: 7px; border-radius: 4px; animation: :global(blink) 1.6s step-end infinite; }
+
+.body { padding: 28px 32px 40px; }
+
+.command { margin: 40px 0 18px; font-size: 13px; }
+.command:first-child { margin-top: 0; }
+.prompt { color: var(--phosphor-dim); }
+.cmd { color: var(--ink); }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 20px;
+}
+.panelTitle { color: var(--phosphor); text-shadow: var(--glow-soft); margin-bottom: 14px; font-size: 13px; }
+
+.meterRow { display: grid; grid-template-columns: 150px 1fr 48px; gap: 12px; align-items: center; margin: 7px 0; }
+.meterLabel { color: var(--sage); font-size: 12px; }
+.meterTrack {
+  height: 9px;
+  background: #000;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.meterFill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--phosphor-dim), var(--phosphor));
+  box-shadow: var(--glow-soft);
+}
+.meterValue { color: var(--phosphor); font-size: 12px; text-align: right; }
+
+.rule { height: 1px; background: linear-gradient(90deg, var(--hairline-bright), transparent); margin: 36px 0; border: 0; }

@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// One table. Stage payloads are JSON blobs rather than normalized rows
+// because the protocol is still moving — spec section 8.
+model Run {
+  id        String   @id
+  query     String
+  config    String
+  status    String
+  stages    String
+  verdict   String?
+  usage     String
+  error     String?
+  elapsedMs Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+// Production: change provider to "postgresql" and point DATABASE_URL at Neon.
+// The String JSON blobs work unchanged; switching them to Json is optional
+// and only affects lib/db.ts serialize/deserialize.
